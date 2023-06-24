@@ -1,5 +1,7 @@
 # Phase 3 CLI Project Template
 
+# TransXceed
+
 ## Learning Goals
 
 - Discuss the basic directory structure of a CLI.
