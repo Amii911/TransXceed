@@ -16,4 +16,18 @@ class Investment(Base):
 
     id = Column(Integer(), primary_key=True)
     company_name = Column(String())
+    investment_name = Column(String())
+    number_of_investments = Column(Integer())
+
+
+
+class Transactions(Base):
+    __tablename__ = 'tranactions'
+
+    id = Column(Integer(), primary_key=True)
+    date = Column(Integer())
+
+
+
+
    
