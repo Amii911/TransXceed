@@ -27,7 +27,7 @@ class Investment(Base):
 
 
 class Transaction(Base):
-    __tablename__ = 'tranactions'
+    __tablename__ = 'transaction'
 
     id = Column(Integer(), primary_key=True)
     date = Column(Integer())
