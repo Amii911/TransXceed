@@ -24,6 +24,7 @@ class Investment(Base):
     number_of_investments = Column(Integer())
 
     def __repr__(self):
+        pass
 
 
 
@@ -33,7 +34,7 @@ class Transactions(Base):
     id = Column(Integer(), primary_key=True)
     date = Column(Integer())
 
-
-
+    def __repr__(self):
+        pass
 
    
