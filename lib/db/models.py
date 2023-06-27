@@ -10,6 +10,10 @@ class User(Base):
     first_name = Column(String())
     last_name = Column(String())
 
+    def __repr__(self):
+        return f'Name : {self.first_name} and {self.last_name}'
+
+
 
 class Investment(Base):
     __tablename__ = 'investments'
@@ -18,6 +22,8 @@ class Investment(Base):
     company_name = Column(String())
     investment_name = Column(String())
     number_of_investments = Column(Integer())
+
+    def __repr__(self):
 
 
 
