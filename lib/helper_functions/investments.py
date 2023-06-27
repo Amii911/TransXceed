@@ -1,0 +1,37 @@
+def create():
+    print("lets create something")
+
+def edit():
+    print("lets edit something")
+
+def view():
+    print("lets view something")
+
+def delete():
+    print("lets delete something")
+
+
+def module():
+    user_choice = 0
+    while user_choice != 5:
+        print(f'''
+            Where would you like to go?
+            1 - Create investment
+            2 - Edit investment
+            3 - View investments 
+            4 - Delete investment
+            5 - Exit 
+        ''')
+        user_choice = int(input("Please enter your choice: "))
+        if user_choice == 1:
+            create()
+        elif user_choice == 2:
+            edit()
+        elif user_choice == 3:
+            view()
+        elif user_choice == 4:
+            delete()
+        elif user_choice == 5:
+            return print('Thanks for using my CLI')
+        else: 
+            print("Invalid choice. Please try again.")

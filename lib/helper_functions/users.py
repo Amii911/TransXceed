@@ -23,14 +23,14 @@ def module():
             5 - Exit 
         ''')
         user_choice = int(input("Please enter your choice: "))
-        if user_choice == 1:s
-            print("Do I even work?")
+        if user_choice == 1:
+            create()
         elif user_choice == 2:
-            pass
+            edit()
         elif user_choice == 3:
-            pass
+            view()
         elif user_choice == 4:
-            pass
+            delete()
         elif user_choice == 5:
             return print('Thanks for using my CLI')
         else: 

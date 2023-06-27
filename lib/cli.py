@@ -24,7 +24,7 @@ def app():
         elif user_choice == 2:
             pass
         elif user_choice == 3:
-            pass
+            transactions.module()
         elif user_choice == 4:
             return print('Thanks for using my CLI')
         else: 
