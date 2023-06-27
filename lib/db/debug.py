@@ -3,7 +3,7 @@ from sqlalchemy.orm import Session
 
 from models import (User, Investment, Transaction)
 
-if name == 'main':
+if __name__ =='__main__':
     engine = create_engine("sqlite:///transxceed.db")
     session = Session(engine, future=True)
 

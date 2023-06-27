@@ -11,7 +11,7 @@ class User(Base):
     last_name = Column(String())
 
     def __repr__(self):
-        return f'Name : {self.first_name} and {self.last_name}'
+        return f'Name : {self.first_name} {self.last_name}'
 
 
 class Investment(Base):
