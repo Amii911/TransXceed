@@ -1,7 +1,6 @@
 from helpers import (
     function_1, function_2,
-    function_3, function_4,
-    function_5
+    function_3
 )
 
 def app():

@@ -10,5 +10,3 @@ def function_3():
 def function_4():
     pass
 
-def function_5():
-    pass
