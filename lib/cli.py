@@ -1,4 +1,5 @@
-from helper_functions import 
+import sys
+import importlib
 sys.path.append('./helper_functions')
 
 investments = importlib.import_module('investments')
