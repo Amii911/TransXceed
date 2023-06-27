@@ -14,7 +14,6 @@ class User(Base):
         return f'Name : {self.first_name} and {self.last_name}'
 
 
-
 class Investment(Base):
     __tablename__ = 'investments'
 
@@ -27,12 +26,12 @@ class Investment(Base):
         pass
 
 
-
 class Transactions(Base):
     __tablename__ = 'tranactions'
 
     id = Column(Integer(), primary_key=True)
     date = Column(Integer())
+    user_id = Column(Intger())
 
     def __repr__(self):
         pass
