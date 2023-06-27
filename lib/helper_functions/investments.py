@@ -32,6 +32,6 @@ def module():
         elif user_choice == 4:
             delete()
         elif user_choice == 5:
-            return print('Thanks for using my CLI')
+            return print('Going back to main menu')
         else: 
             print("Invalid choice. Please try again.")

@@ -19,6 +19,6 @@ def module():
         elif user_choice == 2:
             view()
         elif user_choice == 3:
-            return print('Thanks for using my CLI')
+            return print('Going back to main menu')
         else: 
             print("Invalid choice. Please try again.")
