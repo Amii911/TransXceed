@@ -9,3 +9,15 @@ fake = Faker()
 
 engine = create_engine("sqlite:///transxceed.db")
 session = Session(engine, future=True)
+
+
+session.query(User).delete()
+
+users = []
+
+for i in range(50):
+    person_1 = User(first_name=fake.first_name, last_name=fake.last_name)
+    users.append(person_1)
+
+session.add(users)
+session.commit()
