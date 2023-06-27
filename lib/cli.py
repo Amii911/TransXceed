@@ -1,7 +1,10 @@
-from helpers import (
-    function_1, function_2,
-    function_3
-)
+from helper_functions import 
+sys.path.append('./helper_functions')
+
+investments = importlib.import_module('investments')
+users = importlib.import_module('users')
+transactions = importlib.import_module('transactions')
+
 
 def app():
     print('Welcome to my CLI!')
@@ -16,17 +19,16 @@ def app():
         ''')
         user_choice = int(input("Please enter your choice: "))
         if user_choice == 1:
-            function_1()
+            pass
         elif user_choice == 2:
-            function_2()
+            pass
         elif user_choice == 3:
-            function_3()
+            pass
         elif user_choice == 4:
             return print('Thanks for using my CLI')
         else: 
             print("Invalid choice. Please try again.")
 
-    
     
 if __name__ == '__main__': 
     print("Welcome to TransXceed. Please use the number keys to navigate through")
