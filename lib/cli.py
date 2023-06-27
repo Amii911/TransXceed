@@ -20,7 +20,7 @@ def app():
         ''')
         user_choice = int(input("Please enter your choice: "))
         if user_choice == 1:
-            pass
+            users.module()
         elif user_choice == 2:
             pass
         elif user_choice == 3:
