@@ -23,7 +23,7 @@ def view():
    print(all)
 
 def delete():
-    print("lets delete something")
+    pass
 
 
 def module():
