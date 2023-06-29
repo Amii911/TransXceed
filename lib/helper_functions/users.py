@@ -16,7 +16,35 @@ def create():
     print("You successfully created a user!")
 
 def edit():
-    print("lets edit something")
+    print("                  Let's edit a position's name!")
+    print(session.query(Position).all())
+    print("                  Please enter the ID of the position who's name you'd like to edit: ")
+    edit_id = int(input())
+    edit_id = session.query(Position).get(edit_id)
+    if edit_id != None: 
+        print(edit_id)
+        print(f"                  What would you like the new name of {edit_id.name} to be?")
+        new_name = str(input())
+        print(f'''
+                   OLD NAME : {edit_id.name}
+                   NEW NAME : {new_name}
+
+                Is this correct?
+                --------------------------------------
+                     1 : YES
+
+                     2 : NO
+        ''')
+        check = int(input())
+        while check != 3:
+            if check == 1:
+                print("                  Your changes have been saved!")
+                session.commit()
+                check = 3
+
+            if check == 2:
+                print("                  Oh no! Let's try that again...")
+                edit()
 
 def view():
    all = session.query(User).all()
