@@ -16,35 +16,22 @@ def create():
     print("You successfully created a user!")
 
 def edit():
-    print("                  Let's edit a position's name!")
-    print(session.query(Position).all())
-    print("                  Please enter the ID of the position who's name you'd like to edit: ")
-    edit_id = int(input())
-    edit_id = session.query(Position).get(edit_id)
-    if edit_id != None: 
-        print(edit_id)
-        print(f"                  What would you like the new name of {edit_id.name} to be?")
-        new_name = str(input())
-        print(f'''
-                   OLD NAME : {edit_id.name}
-                   NEW NAME : {new_name}
+    first_name = input("Enter the first name of the user you want to edit: ")
+    last_name = input("Enter the last name of the user you want to edit: ")
 
-                Is this correct?
-                --------------------------------------
-                     1 : YES
+    user = session.query(User).filter_by(first_name=first_name, last_name=last_name).first()
 
-                     2 : NO
-        ''')
-        check = int(input())
-        while check != 3:
-            if check == 1:
-                print("                  Your changes have been saved!")
-                session.commit()
-                check = 3
+    if user:
+        new_first_name = input("Enter the new first name: ")
+        new_last_name = input("Enter the new last name: ")
 
-            if check == 2:
-                print("                  Oh no! Let's try that again...")
-                edit()
+        user.first_name = new_first_name
+        user.last_name = new_last_name
+
+        session.commit()
+        print("User edited successfully.")
+    else:
+        print("User not found.")
 
 def view():
    all = session.query(User).all()
