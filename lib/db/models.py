@@ -11,7 +11,10 @@ class User(Base):
     last_name = Column(String())
 
     def __repr__(self):
-        return f'Name : {self.first_name} {self.last_name}'
+        return f'''
+            Name : {self.first_name} {self.last_name}
+            User Id : {self.id}
+        '''
 
 
 class Investment(Base):
@@ -23,7 +26,12 @@ class Investment(Base):
     number_of_investments = Column(Integer())
 
     def __repr__(self):
-        pass
+        return f'''
+            Company Name : {self.company_name}
+            Investment Name : {self.investment_name}
+            Number of Investments : {self.number_of_investments}
+            Investment Id : {self.id}
+        '''
 
 
 class Transaction(Base):
@@ -34,6 +42,9 @@ class Transaction(Base):
     user_id = Column(Integer())
 
     def __repr__(self):
-        pass
+        return f''' 
+            User Id: {self.user_id}
+            Transaction Id : {self.id}
+        '''
 
    
