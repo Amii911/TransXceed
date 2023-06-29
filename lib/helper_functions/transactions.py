@@ -1,8 +1,16 @@
+from sqlalchemy import create_engine
+from sqlalchemy.orm import Session
+from db.models import User, Investment, Transaction 
+
+engine = create_engine("sqlite:///db/transxceed") 
+session = Session(engine, future=True)
+
 def create():
     print("lets create something")
 
 def view():
-    print("lets view something")
+   all = session.query(Transaction.all())
+   print(all)
 
 def module():
     user_choice = 0

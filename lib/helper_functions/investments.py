@@ -1,3 +1,10 @@
+from sqlalchemy import create_engine
+from sqlalchemy.orm import Session
+from db.models import User, Investment, Transaction 
+
+engine = create_engine("sqlite:///db/transxceed") 
+session = Session(engine, future=True)
+
 def create():
     print("lets create something")
 
@@ -5,7 +12,8 @@ def edit():
     print("lets edit something")
 
 def view():
-    print("lets view something")
+   all = session.query(Investment.all())
+   print(all)
 
 def delete():
     print("lets delete something")
