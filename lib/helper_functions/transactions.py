@@ -24,6 +24,7 @@ def module():
     user_choice = 0
     while user_choice != 3:
         print(f'''
+            ------TRANSACTIONS------
             Where would you like to go?
             1 - Create transaction
             2 - View transaction

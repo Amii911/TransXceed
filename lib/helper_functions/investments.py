@@ -37,6 +37,7 @@ def module():
     user_choice = 0
     while user_choice != 5:
         print(f'''
+            ------INVESTMENTS------
             Where would you like to go?
             1 - Create investment
             2 - View investments 

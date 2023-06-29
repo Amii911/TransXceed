@@ -53,6 +53,7 @@ def module():
     user_choice = 0
     while user_choice != 5:
         print(f'''
+            ------USERS------
             Where would you like to go?
             1 - Create user
             2 - Edit user

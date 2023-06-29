@@ -8,15 +8,14 @@ transactions = importlib.import_module('transactions')
 
 
 def app():
-    print('Welcome to my CLI!')
     user_choice = 0
     while user_choice != 4:
         print(f'''
             Where would you like to go?
-            1 - users
-            2 - investments
-            3 - transactions 
-            4 - exit
+            1 - USERS
+            2 - INVESTMENTS
+            3 - TRANSACTIONS 
+            4 - EXIT
         ''')
         user_choice = int(input("Please enter your choice: "))
         if user_choice == 1:
@@ -32,6 +31,7 @@ def app():
 
     
 if __name__ == '__main__': 
+
     print("Welcome to TransXceed. Please use the number keys to navigate through")
     app()
     print("Come Back Again!")
