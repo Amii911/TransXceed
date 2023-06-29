@@ -23,7 +23,17 @@ def view():
    print(all)
 
 def delete():
-    pass
+    first_name = input("Enter the first name of the user you want to delete: ")
+    last_name = input("Enter the last name of the user you want to delete: ")
+
+    user = session.query(User).filter_by(first_name=first_name, last_name=last_name).first()
+
+    if user:
+        session.delete(user)
+        session.commit()
+        print("User deleted successfully.")
+    else:
+        print("User not found.")
 
 
 def module():
