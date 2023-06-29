@@ -22,28 +22,28 @@ To install and run TransXceed, ensure that you have Python 3 and pip installed o
 Upon running the app, you will be presented with the main menu. From there, you can navigate through different options and perform various actions. Here's an overview of the available functionality:
 
 Main Menu
-    1 - USERS
-    2 - INVESTMENTS
-    3 - TRANSACTIONS 
-    4 - EXIT
-
+1 - USERS
+2 - INVESTMENTS
+3 - TRANSACTIONS 
+4 - EXIT
+***
 User Menu
-    1 - Create user
-    2 - Edit user
-    3 - View users 
-    4 - Delete user
-    5 - Exit 
-
+1 - Create user
+2 - Edit user
+3 - View users 
+4 - Delete user
+5 - Exit 
+***
 Investment Menu
-    1 - Create investment
-    2 - View investments 
-    3 - Delete investment
-    4 - Exit 
-
+1 - Create investment
+2 - View investments 
+3 - Delete investment
+4 - Exit 
+***
 Transaction Menu
-    1 - Create transaction
-    2 - View transaction
-    3 - Exit 
+1 - Create transaction
+2 - View transaction
+3 - Exit 
 
 ## Resources
 
