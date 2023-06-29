@@ -6,7 +6,15 @@ engine = create_engine("sqlite:///db/transxceed.db")
 session = Session(engine, future=True)
 
 def create():
-    print("lets create something")
+    company_name = input("Please enter the company you like to make an investment with: ")
+    investment_name = input("Please enter the investments name: ")
+    number_of_investments = input("How many investments would you like to add? ")
+
+    new_investment = Investment(company_name=company_name, investment_name=investment_name, number_of_investments=number_of_investments)
+
+    session.add(new_investment)
+    session.commit()
+    print("You have successfully added a new investment!")
 
 def view():
    all = session.query(Investment).all()

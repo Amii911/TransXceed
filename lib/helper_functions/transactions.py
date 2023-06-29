@@ -1,12 +1,20 @@
 from sqlalchemy import create_engine
 from sqlalchemy.orm import Session
 from db.models import User, Investment, Transaction 
+from datetime import datetime
 
 engine = create_engine("sqlite:///db/transxceed.db") 
 session = Session(engine, future=True)
 
 def create():
-    print("lets create something")
+    date_str = input("Please enter the date of your transaction (YYYY-MM-DD): ")
+    date = datetime.strptime(date_str, "%Y-%m-%d")
+
+    new_transaction = Transaction(date=date)
+
+    session.add(new_transaction)
+    session.commit()
+    print("Successfully created a transaction!")
 
 def view():
    all = session.query(Transaction).all()

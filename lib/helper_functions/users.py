@@ -13,7 +13,7 @@ def create():
 
     session.add(new_user)
     session.commit()
-    print("Successfully created a user!")
+    print("You successfully created a user!")
 
 def edit():
     print("lets edit something")
