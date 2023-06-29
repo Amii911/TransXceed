@@ -45,6 +45,6 @@ Transaction Menu
 2. View transaction
 3. Exit 
 
-## Resources
+## Resource
 
 - [Faker](https://faker.readthedocs.io/en/master/) - a Python package that generates fake data
