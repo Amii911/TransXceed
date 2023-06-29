@@ -2,17 +2,14 @@ from sqlalchemy import create_engine
 from sqlalchemy.orm import Session
 from db.models import User, Investment, Transaction 
 
-engine = create_engine("sqlite:///db/transxceed") 
+engine = create_engine("sqlite:///db/transxceed.db") 
 session = Session(engine, future=True)
 
 def create():
     print("lets create something")
 
-def edit():
-    print("lets edit something")
-
 def view():
-   all = session.query(Investment.all())
+   all = session.query(Investment).all()
    print(all)
 
 def delete():
@@ -25,21 +22,18 @@ def module():
         print(f'''
             Where would you like to go?
             1 - Create investment
-            2 - Edit investment
-            3 - View investments 
-            4 - Delete investment
-            5 - Exit 
+            2 - View investments 
+            3 - Delete investment
+            4 - Exit 
         ''')
         user_choice = int(input("Please enter your choice: "))
         if user_choice == 1:
             create()
         elif user_choice == 2:
-            edit()
-        elif user_choice == 3:
             view()
-        elif user_choice == 4:
+        elif user_choice == 3:
             delete()
-        elif user_choice == 5:
+        elif user_choice == 4:
             return print('Going back to main menu')
         else: 
             print("Invalid choice. Please try again.")
