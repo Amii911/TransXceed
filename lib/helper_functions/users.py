@@ -16,20 +16,19 @@ def create():
     print("You successfully created a user!")
 
 def edit():
-    first_name = input("Enter the first name of the user you want to edit: ")
-    last_name = input("Enter the last name of the user you want to edit: ")
-
-    user = session.query(User).filter_by(first_name=first_name, last_name=last_name).first()
+    user_id = int(input("Enter the ID of the user you want to edit: "))
+    user = session.query(User).filter_by(id=user_id).first()
 
     if user:
-        new_first_name = input("Enter the new first name: ")
-        new_last_name = input("Enter the new last name: ")
+        print("User found. Please provide the updated information:")
+        first_name = input("New first name: ")
+        last_name = input("New last name: ")
 
-        user.first_name = new_first_name
-        user.last_name = new_last_name
+        user.first_name = first_name
+        user.last_name = last_name
 
         session.commit()
-        print("User edited successfully.")
+        print("User updated successfully.")
     else:
         print("User not found.")
 
@@ -38,10 +37,9 @@ def view():
    print(all)
 
 def delete():
-    first_name = input("Enter the first name of the user you want to delete: ")
-    last_name = input("Enter the last name of the user you want to delete: ")
+    user_id = int(input("Enter the ID of the user you want to delete: "))
 
-    user = session.query(User).filter_by(first_name=first_name, last_name=last_name).first()
+    user = session.query(User).get(user_id)
 
     if user:
         session.delete(user)
