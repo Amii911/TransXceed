@@ -10,6 +10,8 @@ class User(Base):
     first_name = Column(String())
     last_name = Column(String())
 
+    transactions = relationship('Transaction', backref=backref('user'))
+
     def __repr__(self):
         return f'''
             Name : {self.first_name} {self.last_name}

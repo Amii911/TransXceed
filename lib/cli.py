@@ -25,7 +25,7 @@ def app():
         elif user_choice == 3:
             transactions.module()
         elif user_choice == 4:
-            return print('Thanks for using my CLI')
+            return print('Thanks for using TransXceed.')
         else: 
             print("Invalid choice. Please try again.")
 

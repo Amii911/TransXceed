@@ -21,9 +21,9 @@ def view():
    print(all)
 
 def delete():
-    investment_name = input("Enter the name of the investment you want to delete: ")
+    investment_id = input("Enter the ID of the investment you want to delete: ")
 
-    investment = session.query(Investment).filter_by(investment_name=investment_name).first()
+    investment = session.query(Investment).get(investment_id)
 
     if investment:
         session.delete(investment)
