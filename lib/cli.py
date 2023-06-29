@@ -22,7 +22,7 @@ def app():
         if user_choice == 1:
             users.module()
         elif user_choice == 2:
-            pass
+            investments.module()
         elif user_choice == 3:
             transactions.module()
         elif user_choice == 4:
