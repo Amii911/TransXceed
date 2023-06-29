@@ -28,22 +28,22 @@ Main Menu
 4. EXIT
 ***
 User Menu
-1 - Create user
-2 - Edit user
-3 - View users 
-4 - Delete user
-5 - Exit 
+1. Create user
+2. Edit user
+3. View users 
+4. Delete user
+5. Exit 
 ***
 Investment Menu
-1 - Create investment
-2 - View investments 
-3 - Delete investment
-4 - Exit 
+1. Create investment
+2. View investments 
+3. Delete investment
+4. Exit 
 ***
 Transaction Menu
-1 - Create transaction
-2 - View transaction
-3 - Exit 
+1. Create transaction
+2. View transaction
+3. Exit 
 
 ## Resources
 
