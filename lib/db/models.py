@@ -42,7 +42,7 @@ class Transaction(Base):
 
     id = Column(Integer(), primary_key=True)
     date = Column(Integer())
-    user_id = Column(Integer())
+    user_id = Column(Integer(), ForeignKey("users.id"))
 
     def __repr__(self):
         return f''' 
