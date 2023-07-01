@@ -40,10 +40,12 @@ for i in range(50):
 transactions = []
 for i in range(50):
     new_transaction = Transaction(
-        user_id= random.randint(0,500),
+        user_id = random.randint(0,50),
+        investment_id  = random.randint(0,50),
         # the id for each transaction is set to i+1 to ensure uniqueness. without it i wasnt able to seed
         id=i+1,
-        date=datetime.datetime.utcnow()
+        date=datetime.datetime.utcnow(),
+        amount = random.randint(15, 1000)
     )
     transactions.append(new_transaction)
 

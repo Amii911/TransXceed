@@ -10,7 +10,15 @@ def create():
     date_str = input("Please enter the date of your transaction (YYYY-MM-DD): ")
     date = datetime.strptime(date_str, "%Y-%m-%d")
 
-    new_transaction = Transaction(date=date)
+    user_str = input("Please enter the user id for this transaction: ")
+    investment_str = input("Please enter the investment id for this transaction: ")
+    amount_str = input("Please enter the amount for this transaction: ")
+
+    user_id = int(user_str)
+    investment_id = int(investment_str)
+    amount = int(amount_str)
+
+    new_transaction = Transaction(date=date,user_id=user_id,investment_id=investment_id,amount=amount)
 
     session.add(new_transaction)
     session.commit()
@@ -27,7 +35,7 @@ def module():
             ------TRANSACTIONS------
             Where would you like to go?
             1 - Create transaction
-            2 - View transaction
+            2 - View transactions
             3 - Exit 
         ''')
         user_choice = int(input("Please enter your choice: "))
