@@ -32,7 +32,8 @@ User Menu
 2. Edit user
 3. View users 
 4. Delete user
-5. Exit 
+5. List transactions for users
+6. Exit 
 ***
 Investment Menu
 1. Create investment
@@ -45,6 +46,9 @@ Transaction Menu
 2. View transaction
 3. Exit 
 
-## Resource
-
+## Resources
+- [SQLite](https://sqlite.org/index.html) - a relational database engine that comes with Python
+- [SQLAlchemy](https://www.sqlalchemy.org/) - a Python ORM package to map database tables to Python classes
 - [Faker](https://faker.readthedocs.io/en/master/) - a Python package that generates fake data
+- [Alembic](https://alembic.sqlalchemy.org/en/latest/) - a Python lightweight package for data mirgations 
+-

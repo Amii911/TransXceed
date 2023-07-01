@@ -49,6 +49,15 @@ def delete():
         print("User not found.")
 
 
+def list_transactions():
+    user_id = int(input("Enter the user id: "))
+    user = session.query(User).get(user_id)
+    if len(user.transactions) == 0:
+        print("Sorry, no transactions found for this user")
+    else:
+        print(user.transactions)
+   
+
 def module():
     user_choice = 0
     while user_choice != 5:
@@ -59,7 +68,8 @@ def module():
             2 - Edit user
             3 - View users 
             4 - Delete user
-            5 - Exit 
+            5 - List transactions for user
+            6 - Exit 
         ''')
         user_choice = int(input("Please enter your choice: "))
         if user_choice == 1:
@@ -71,6 +81,8 @@ def module():
         elif user_choice == 4:
             delete()
         elif user_choice == 5:
+            list_transactions()    
+        elif user_choice == 6:
             return print('Going back to main menu')
         else: 
             print("Invalid choice. Please try again.")
