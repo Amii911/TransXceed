@@ -51,4 +51,4 @@ Transaction Menu
 - [SQLAlchemy](https://www.sqlalchemy.org/) - a Python ORM package to map database tables to Python classes
 - [Faker](https://faker.readthedocs.io/en/master/) - a Python package that generates fake data
 - [Alembic](https://alembic.sqlalchemy.org/en/latest/) - a Python lightweight package for data mirgations 
--
+
